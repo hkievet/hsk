@@ -7,13 +7,13 @@ for (let word of data.words) {
 }
 
 export function lookupLetters(letters: string): CharacterInfo[] {
+    console.log(letters)
+    if (!letters) {
+        return
+    }
     let index = 0;
     const characters: CharacterInfo[] = []
-    console.log(letters)
-    console.log(letters.length)
     while (index < letters.length) {
-        console.log("---")
-        console.log(index)
         const oneLetter = letters.substring(index, index + 1)
         const twoLetters = letters.substring(index, index + 2)
         if (wordsByCharacter[twoLetters]) {

@@ -1,15 +1,30 @@
 <script lang="ts">
+	import Selector from '../components/Selector.svelte';
 	import CharacterCard from '../components/CharacterCard.svelte';
-
 	import { lookupLetters } from '../helpers';
-
 	import phrases from '../sentences.json';
-	const word = phrases.sentences[0].phrase;
-	const letters = lookupLetters(word);
+
+	const options = phrases.sentences.map((phrase) => {
+		return { key: phrase.phrase, value: phrase.meaning };
+	});
+
+	let selectedPhrase = phrases.sentences[0];
+	$: letters = lookupLetters(selectedPhrase.phrase);
+
+	function onChange(value) {
+		console.log(value);
+		const details = value.detail;
+		console.log(details);
+		selectedPhrase = { phrase: details.key, meaning: details.value };
+	}
 </script>
 
-<div class="grid place-items-center h-screen">
-	{#each letters as word}
-		<CharacterCard character={word} />
-	{/each}
+<Selector {options} on:onChange={onChange} value={selectedPhrase.phrase} />
+
+<div class="flex flex-wrap mx-auto w-11/12 justify-between space-y-4">
+	{#if letters}
+		{#each letters as word}
+			<CharacterCard character={word} />
+		{/each}
+	{/if}
 </div>

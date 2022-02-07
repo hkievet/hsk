@@ -1,6 +1,34 @@
 {
     "sentences": [
         {
+            "phrase": "他在那家医院工作",
+            "meaning": "He works at that hospital"
+        },
+        {
+            "phrase": "我喜欢中国",
+            "meaning": "I like China"
+        },
+        {
+            "phrase": "他喜欢他的工作",
+            "meaning": "He likes his job."
+        },
+        {
+            "phrase": "我在看电影",
+            "meaning": "I am watching a movie"
+        },
+        {
+            "phrase": "你在说什么",
+            "meaning": "What are you saying?"
+        },
+        {
+            "phrase": "他说了什么",
+            "meaning": "What did she say?"
+        },
+        {
+            "phrase": "我不认识他朋友",
+            "meaning": "I don't know his friend."
+        },
+        {
             "phrase": "他女儿不在家",
             "meaning": "Her daughter is not at home"
         }

@@ -3,7 +3,7 @@
 	export let character: CharacterInfo;
 </script>
 
-<div class="w-96 p-4">
+<div class="w-96 p-2 bg-slate-50">
 	<p>{character.simplified}</p>
 	<p>{character.pinyin}</p>
 	<p>{character.english}</p>
