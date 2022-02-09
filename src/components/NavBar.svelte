@@ -7,7 +7,6 @@
 	];
 
 	$: path = $page.url.pathname;
-	console.log(path);
 </script>
 
 <nav>

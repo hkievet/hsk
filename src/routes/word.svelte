@@ -12,9 +12,7 @@
 	$: letters = lookupLetters(selectedPhrase.phrase);
 
 	function onChange(value) {
-		console.log(value);
 		const details = value.detail;
-		console.log(details);
 		selectedPhrase = { phrase: details.key, meaning: details.value };
 	}
 </script>
@@ -23,7 +21,7 @@
 
 <div class="flex flex-wrap mx-auto w-11/12 justify-between space-y-4">
 	{#if letters}
-		{#each letters as word}
+		{#each letters as word ({ letters, word })}
 			<CharacterCard character={word} />
 		{/each}
 	{/if}

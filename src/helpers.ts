@@ -7,7 +7,6 @@ for (let word of data.words) {
 }
 
 export function lookupLetters(letters: string): CharacterInfo[] {
-    console.log(letters)
     if (!letters) {
         return
     }

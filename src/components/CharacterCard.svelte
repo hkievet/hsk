@@ -8,7 +8,7 @@
 	<p>{character.pinyin}</p>
 	<p>{character.english}</p>
 	<div class="flex">
-		{#each character.simplified as char}
+		{#each character.simplified as char (char)}
 			<CharacterStroke character={char} />
 		{/each}
 	</div>
