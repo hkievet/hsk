@@ -9,7 +9,7 @@
 	}
 </script>
 
-<div class="flex gap-x-3 p-3">
+<div class="flex gap-x-3 p-3 flex-wrap">
 	{#each options as option}
 		<button class:selected={option.key === value} on:click={() => onChange(option)}
 			>{option.key}</button
@@ -19,7 +19,7 @@
 
 <style lang="postcss">
 	button {
-		@apply p-3 border-2 border-transparent;
+		@apply p-3 border-2 border-transparent whitespace-nowrap m-2;
 	}
 	button:hover {
 		@apply border-solid border-2 border-green-200;

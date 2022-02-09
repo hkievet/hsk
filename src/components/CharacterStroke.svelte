@@ -1,7 +1,7 @@
 <script lang="ts">
 	import HanziWriter from 'hanzi-writer';
 	import { v4 as uuidv4 } from 'uuid';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 
 	export let character: string;
 	const uuid = uuidv4();

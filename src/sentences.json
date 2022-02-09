@@ -31,6 +31,10 @@
         {
             "phrase": "他女儿不在家",
             "meaning": "Her daughter is not at home"
+        },
+        {
+            "phrase": "他是我爸爸",
+            "meaning": "This is my dad"
         }
     ]
 }
